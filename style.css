@@ -7,8 +7,7 @@
 }
 body{
   font-family: 'Montserrat', sans-serif;
-/* font-family: 'Poppins', sans-serif; */
-    font-family: montserrat;
+    position: relative;
 }
 nav{
     background: #0082e6;
@@ -17,23 +16,14 @@ nav{
     position: fixed;
     top: 0;
     z-index: 100;
-}
-label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+    overflow: hidden;
 }
 img.logo{
-    border-radius: 51%;
     height: 100px;
-    /* width: 100px; */
-    padding: 0 50px 0 100px;
-    /* z-index: 1; */
+    padding: 0 40px;
+    border-radius: 50%;
 }
 nav ul{
-    /* display: inline-block; */
     float: right;
     margin-right: 20px;
 }
@@ -77,7 +67,7 @@ a.active,a:hover{
         font-size: 16px;
     } 
 }
-@media  screen and (max-width: 858px) {
+@media  screen and (max-width: 868px) {
     .checkbtn{
         display: block;
     }
@@ -110,22 +100,23 @@ a.active,a:hover{
 /* styling the first section */
 #first-section{
     background: url(good.jpg) no-repeat;
-    /* background: #fff; */
+    background-image: linear-gradient(180deg, #1b9bff, #abab);
     background-size: cover;
-    height: 150vh;
+    height: 120vh;
     width: 100%;
     justify-content: center;
     justify-items: center;
     text-align: center;
+    overflow: hidden;
 }
 #slider{
     position: relative;
-    width: 80%;
-    height: 90vh; 
+    width: 90%;
+    height: 80vh; 
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-    left: 10%;
-    top: 10%;
+    left: 5%;
+    top: 15%;
 }
 
 #slider ul {
@@ -141,7 +132,6 @@ a.active,a:hover{
   #slider ul li {
     position: relative;
     height: 100%;
-  
     float: left;
   }
   #slider ul li img{
@@ -184,36 +174,43 @@ a.active,a:hover{
   .description{
     width: 80%;
     height: 80vh;
-    background: rgba(0, 0, 0, 0.2);
-    /* display: block; */
     position: absolute;
-    /* top: 40px; */
+    top: 50px;
     left: 10%;
-    /* opacity: .3; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
     text-align: center;
-    padding: 50px 80px;
-    top: 25%;
-    /* z-index: 100; */
+    font-size: 14px;
+    /* color: green; */
   }
   .description h2{
-    color: white;
+    color: #020202;
     line-height: 80px;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding-top: 30px;
+    color: #fff;
+
   }
   .description p{
-    color: white;
+    color: #020202;
     font-size: 24px;
-    line-height: 80px;
+    line-height: 60px;
+    font-weight: bold;
+    color: #fff;
+
   }
 
-  #first-section h1{
-    /* padding: 30px 0; */
+  #first-section  #slider h1{
+    
     padding-top: 10px;
     margin-bottom: 20px;
-    color: white;
+    color: #2c3e50;
     font-size: 34px;
     font-weight: bold;
     z-index: 2;
@@ -225,125 +222,211 @@ a.active,a:hover{
 
   /* -----Styling the second section */
   #second-section{
-    width: 80%;
-    height: 70vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: (auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 50% 50%;
+    grid-gap: 0;
+    margin-top: 50px;
+    margin-left: 5%;
+    position: relative;
+  }
+
+  #second-section div{
     background: #abab;
-    display: block;
-    /* position: absolute; */
-    position: relative;
-    left: 10%;
-    top: 40px;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    font-size: 15px;
+    transition: all 3s ease-in-out;
+    box-shadow: 2px 3px 2px 3px rgba(0, 0, 0, 0.3);
   }
-  #second-section #about{
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    /* justify-content: center; */
-    position: relative;
-  }
-  /* ---------to be made a background Image instead---------- */
-  #second-section #about img{
-    width: 50%;
-    height: 100%;
-  }
-  #second-section #about .riviere{
-    width: 50%;
-    height: 100%;
-    padding: 30px 40px;
-    color: white;
-    background: #1b9bff;
-  }
-  #second-section #about .riviere h1{
+ #second-section #obed-bg{
+  background: url("logo.PNG") no-repeat;
+  background-size: cover;
+ }
+ 
+  #second-section .riviere h1{
     color: rgba(255, 0, 0, 0.7);
     font-size: 34px;
     font-weight: bold;
     padding: 30px 20px;
   }
-  #second-section #about .riviere p{
+  #second-section .riviere p{
     line-height: 26px;
   }
-  #second-section #about .riviere:hover{
-    /* background: rgba(255,165,0,0.6); */
+  #second-section .riviere:hover{
     background: #fff ;
     transform: translateY(-10px);
-    color: #0082e6;
+    color: #2e485c;
   }
-  /* --------responsove design for the first section and second section---------------- */
-  @media screen and (max-width: 858px) {
-    #first-section{
-      width: 100%;
-    }
-    #first-slider{
-      /* ------- adjust the height and width well */
-      width: 100%;
-      height: 70vh;
-    }
-   .description{
-      padding: 20px 30px;
-    }
-   .description h2{
-      line-height: 30px;
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      padding-top: 30px;
-    }
-    .description p{
-      font-size: 18px;
-      line-height: 30px;
-      /* color: #0082e6; */
-    }
-    #second-section #about{
-      flex-direction: column;
-    }
-    #second-section #about img{
-      width: 100%;
-      height: 50%;
-    }
-    #second-section #about .riviere{
-      width: 100%;
-      height: 50%;
-      padding: 30px 40px;
-      color: white;
-      background: #1b9bff;
-    }
-    /* ---------trying for mission - vision media query */
-    #mission-vision{
-      flex-direction: column;
-      padding: 15px 25px;
-      margin-top: 30px;
-      justify-content: space-between;
-    }
-    #mission-vision .mission h1,
-  #mission-vision .vision h1{
-    left: 20px;
-  }
-
+  #second-section #obed-bg:hover{
+    transform: translateY(-10px);
   }
   #mission-vision{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    position: relative;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+ grid-gap: 10px;
+
     padding: 30px 40px;
     margin-top: 40px;
   }
-  #mission-vision .mission,
-  #mission-vision .vision{
-    width: 40%;
-    height: 80%;
-    padding: 10px 20px;
+  #mission-vision div{
+    padding: 40px;
+    font-size: 15px ;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    line-height: 20px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
   }
-  #mission-vision .mission h1,
+  /* #mission-vision .mission h1,
   #mission-vision .vision h1{
     position: relative;
-    /* text-align: center; */
     display: inline-block;
     font-size: 30px;
     padding: 20px 0;
     left: 25%;
+  } */
+  #mission-vision .mission,
+  #mission-vision .vision{
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 16px;
   }
+  #mission-vision .mission h1,
+  #mission-vision .vision h1{
+    color: rgba(255, 0, 0, 0.7);
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #mission-vision .mission:hover{
+    transform: translateX(-10px);
+  }
+  #mission-vision .vision:hover{
+    transform: translateX(10px);
+  }
+  #activities{
+    width: 80%;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
+    background: #abab;
+    /* left: 10%; */
+    margin-left: 10%;
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+    transition: background 0.5s, transform 0.5s;
+    overflow: hidden;
+  }
+  #activities:hover{
+    transform: translateX(-20px);
+  }
+  #activities h1{
+    color: rgba(255, 0, 0, 0.7);
+    margin-bottom: 30px;
+  }
+  .main-activities{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  .client-views{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    overflow: hidden;
+  }
+  .client-views h1{
+    color: rgba(255, 0, 0, 0.7);
+    padding-bottom: 30px;
+  }
+
+#testimonials{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+   margin-top: 50px;
+}
+#testimonials div{
+  background: #abab;
+  padding: 40px;
+  font-size: 15px ;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+#testimonials div:hover{
+ transform: translateY(-10px);
+}
+footer{
+  margin-top: 40px;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  bottom: 0;
+  background-image: linear-gradient(120deg, #fefe,#1b9bff);
+}
+
+
+/* -------- remaining
+-------- working on footer, other pages and media querries...----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* --------responsove design for the first section and second section---------------- */
+ @media screen and (max-width: 858px) {
+  #first-section #slider h1{
+    font-size: 24px;
+    padding-top: 20px;
+  }
+ .description h2{
+    color: #fff;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-top: 0;
+  }
+  .description p{
+      color: white;
+      font-size: 18px;
+      line-height: 30px;
+    } 
+    #second-section{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .riviere{
+      padding: 20px 20px;
+      /* margin-bottom: 500px; */
+    }
+#second-section .riviere h1{
+font-size: 24px;
+line-height: 30px;
+padding: 10px 10px;
+}
+.riviere p{
+line-height: 20px;
+}
+}
