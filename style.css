@@ -100,7 +100,7 @@ a.active,a:hover{
 /* styling the first section */
 #first-section{
     background: url(good.jpg) no-repeat;
-    background-image: linear-gradient(180deg, #1b9bff, #abab);
+    background-image: linear-gradient(180deg, #1b9bff, #fefefe);
     background-size: cover;
     height: 120vh;
     width: 100%;
@@ -353,39 +353,155 @@ a.active,a:hover{
 #testimonials div:hover{
  transform: translateY(-10px);
 }
+#testimonials div h4{
+  margin-bottom: 30px;
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 20px;
+}
+#testimonials div p{
+  font-size: 16px;
+  line-height: 24px;
+}
 footer{
   margin-top: 40px;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   position: relative;
   bottom: 0;
-  background-image: linear-gradient(120deg, #fefe,#1b9bff);
+  background-image: linear-gradient(180deg, #abab,#1b9bff);
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
 }
 
+.footer-col ul li{
+  list-style: none;
+}
+.footer-col h4{
+  color: #e91e64;
+  color: rgba(255, 0, 0, 0.7);
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+}
+.footer-col h4::before{
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  background-color: #e91e64;
+  bottom: -18px;
+}
+.footer-col ul li{
+  padding: 10px 0;
+}
+.footer-col ul li a{
+text-decoration: none;
+ color: rgb(255, 102, 0);
+ font-size: 16px;
+ transition:  0.4s;
+ font-weight: bold;
+}
+.footer-col input{
+  border: none;
+  width: 250px;
+  height: 45px;
+  display: block;
+  padding-left: 20px;
+  margin: 14px 0;
+  border-radius: 6px;
+  border-bottom: 2px solid #e91e64 ;
+  outline: none;
+}
+.footer-col #submit{
+    padding: 0 20px;
+    background: #e91e64;
+    border: none;
+    outline: none;
+    color: #fefefe;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer-col #message{
+  border-radius: 6px;
+  border: none;
+  border-bottom: 2px solid #e91e64;
+  outline: none;
+  padding: 10px 10px;
+}
+.col{
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* text-align: center; */
+  vertical-align: -webkit-baseline-middle;
+}
+.col .bar{
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgb(255, 102, 0);
+}
+.col div p{
+  padding-top: 20px;
+  color: rgb(255, 102, 0);
+  font-weight: bold;
+  font-size: 18px;
+}
+.col .right .socialIcon{
+  /* display:block; */
+  position: relative;
+  float: right;
+  width: calc(80% - 400px);
+  margin-top:-25px ;
+}
 
-/* -------- remaining
--------- working on footer, other pages and media querries...----------- */
+.row .right .socialIcon i{
+display: inline-block;
+/* padding: 0 10px; */
+font-size: 24px;
+margin: 0 20px;
+transition: 0.4s;
+color: #fefe;
+}
+.row .right .socialIcon i:hover{
+   color: rgba(255, 0, 0, 0.7);
+   transform: translateY(-6px);
+} 
 
+@media (max-width: 865px){
+ 
+  footer .row{
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  footer .footer-col ul{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .footer-col input,
+  .footer-col textarea{
+    width: 100%;
+  }
+  .row .right{
+    display: flex;
 
+  }
+  .row .right .socialIcon{
+    display: flex;
+    width: calc(100% - 35%);
+  }
+  .row .right .socialIcon i{
+    /* margin: 0 px; */
+    margin-top: 30px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+}
 
 
 
